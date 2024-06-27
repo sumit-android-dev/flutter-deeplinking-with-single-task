@@ -32,11 +32,7 @@ class _HomeScreenState extends State<HomeScreen> {
     _appLinks = AppLinks();
     _linkSubscription = _appLinks.uriLinkStream.listen((uri) {
       /// https://hotel-sa.co/room_details.php?id=762
-      Map<String, String> queryParams = uri.queryParameters;
-      // Extract individual values
-      String id = queryParams['id'] ?? '';
       debugPrint('Uri Link: $uri');
-      debugPrint('Uri Link: $id');
       openAppLink(uri);
     });
   }
@@ -45,6 +41,7 @@ class _HomeScreenState extends State<HomeScreen> {
     Map<String, String> queryParams = uri.queryParameters;
     // Extract individual values
     String id = queryParams['id'] ?? '';
+    debugPrint('Uri Link: $id');
     if(id.isNotEmpty){
       Get.to(() => DeepLinkScreen(id: id));
     } else{
