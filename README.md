@@ -84,5 +84,4 @@ import app_links
 
 References:
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab](https://pub.dev/packages/app_links))
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+- [App linking from flutter](https://docs.flutter.dev/get-started/codelab](https://pub.dev/packages/app_links))
