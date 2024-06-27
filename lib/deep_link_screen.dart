@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 
 class DeepLinkScreen extends StatefulWidget {
-  const DeepLinkScreen({super.key});
+  String? id;
+  DeepLinkScreen({super.key,this.id});
 
   @override
   State<DeepLinkScreen> createState() => _DeepLinkScreenState();
@@ -16,10 +17,10 @@ class _DeepLinkScreenState extends State<DeepLinkScreen> {
         backgroundColor: Colors.blue,
       ),
       backgroundColor: Colors.orangeAccent,
-      body: const Center(
+      body: Center(
         child: Text(
-          "Deep Link Screen",
-          style: TextStyle(color: Colors.white, fontSize: 32.0),
+          "ID : ${widget.id}",
+          style: const TextStyle(color: Colors.white, fontSize: 32.0),
         ),
       ),
     );

@@ -31,13 +31,25 @@ class _HomeScreenState extends State<HomeScreen> {
   void initDeepLinks() {
     _appLinks = AppLinks();
     _linkSubscription = _appLinks.uriLinkStream.listen((uri) {
+      /// https://hotel-sa.co/room_details.php?id=762
+      Map<String, String> queryParams = uri.queryParameters;
+      // Extract individual values
+      String id = queryParams['id'] ?? '';
       debugPrint('Uri Link: $uri');
+      debugPrint('Uri Link: $id');
       openAppLink(uri);
     });
   }
 
   void openAppLink(Uri uri) {
-    Get.to(() => const DeepLinkScreen());
+    Map<String, String> queryParams = uri.queryParameters;
+    // Extract individual values
+    String id = queryParams['id'] ?? '';
+    if(id.isNotEmpty){
+      Get.to(() => DeepLinkScreen(id: id));
+    } else{
+      Get.snackbar('Error', 'Invalid deep link url',snackPosition: SnackPosition.BOTTOM);
+    }
   }
 
   @override
