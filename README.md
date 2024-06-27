@@ -33,7 +33,8 @@ In AndroidManifest.xml
     <data android:scheme="sample" android:host="open.my.app" />
     <!-- <data android:scheme="sample" /> -->
 </intent-filter>
-xml```
+
+```
 References:
 
 - [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
