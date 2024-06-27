@@ -35,6 +35,16 @@ In AndroidManifest.xml
 </intent-filter>
 
 ```
+
+## Testing in android by terminal
+
+```
+
+adb shell am start -a android.intent.action.VIEW \
+  -d "sample://open.my.app/#/book/hello-world"
+
+```
+
 References:
 
 - [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
