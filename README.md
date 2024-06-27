@@ -55,6 +55,32 @@ To add your domain to the entitlement, click Add (+) at the bottom of the Domain
 
 <img width="718" alt="supporting-associated-domains-1~dark@2x" src="https://github.com/sumit-android-dev/flutter-deeplinking-with-single-task/assets/84369514/3b44fa07-0ebe-4199-b2f9-ea073800af22">
 
+Add the domains that share credentials with your app. For services other than appclips, you can prefix a domain with *. to match all of its subdomains.
+
+## Setup in swift file 
+
+```swift
+import app_links
+
+@UIApplicationMain
+@objc class AppDelegate: FlutterAppDelegate {
+  override func application(
+    _ application: UIApplication,
+    didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?
+  ) -> Bool {
+    GeneratedPluginRegistrant.register(with: self)
+
+    // Retrieve the link from parameters
+    if let url = AppLinks.shared.getLink(launchOptions: launchOptions) {
+      // We have a link, propagate it to your Flutter app or not
+      AppLinks.shared.handleLink(url: url)
+      return true // Returning true will stop the propagation to other packages
+    }
+
+    return super.application(application, didFinishLaunchingWithOptions: launchOptions)
+  }
+}
+```
 
 References:
 
