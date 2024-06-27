@@ -84,7 +84,6 @@ import app_links
 
 ```
 /usr/bin/xcrun simctl openurl booted "app://www.example.com/#/book/hello-world"
-
 ```
 
 References:
