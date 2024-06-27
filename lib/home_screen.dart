@@ -45,7 +45,7 @@ class _HomeScreenState extends State<HomeScreen> {
     if(id.isNotEmpty){
       Get.to(() => DeepLinkScreen(id: id));
     } else{
-      Get.snackbar('Error', 'Invalid deep link url',snackPosition: SnackPosition.BOTTOM);
+      Get.snackbar('Message', 'Invalid deep link url',snackPosition: SnackPosition.BOTTOM);
     }
   }
 
