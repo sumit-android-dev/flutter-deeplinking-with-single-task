@@ -86,9 +86,11 @@ import app_links
 /usr/bin/xcrun simctl openurl booted "app://www.example.com/#/book/hello-world"
 ```
 
+
 Demo
 
 <img src="https://github.com/sumit-android-dev/flutter-deeplinking-with-single-task/assets/84369514/4724bf4a-83f9-4a1f-9fcb-d3114b43231a" height="700" width="300" alt="ezgif com-video-to-gif-converter" />
+
 
 
 References:
