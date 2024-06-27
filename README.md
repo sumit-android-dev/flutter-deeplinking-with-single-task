@@ -88,4 +88,4 @@ import app_links
 
 References:
 
-- [App linking from flutter](https://docs.flutter.dev/get-started/codelab](https://pub.dev/packages/app_links))
+- [App linking from flutter]((https://pub.dev/packages/app_links))
