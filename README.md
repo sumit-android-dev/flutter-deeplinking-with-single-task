@@ -39,10 +39,8 @@ In AndroidManifest.xml
 ## Testing in android by terminal
 
 ```
-
 adb shell am start -a android.intent.action.VIEW \
   -d "sample://open.my.app/#/book/hello-world"
-
 ```
 
 ## iOS configuration
@@ -80,6 +78,13 @@ import app_links
     return super.application(application, didFinishLaunchingWithOptions: launchOptions)
   }
 }
+```
+
+## Testing in iOS by terminal
+
+```
+/usr/bin/xcrun simctl openurl booted "app://www.example.com/#/book/hello-world"
+
 ```
 
 References:
