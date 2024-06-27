@@ -12,6 +12,7 @@ catch custom schemes to open your app (Deep Link / Custom URL scheme).
 ## Android configuration
 In AndroidManifest.xml
 
+```xml
 <!-- <meta-data android:name="flutter_deeplinking_enabled" android:value="true" /> -->
 
 <!-- App Link sample -->
